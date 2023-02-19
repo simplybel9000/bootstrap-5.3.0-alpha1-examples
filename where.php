@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "myadmin";
 $password = "myadmin";
-$dbname = "reg";
+$dbname = "ponce";
 
 
 
@@ -13,13 +13,13 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT un FROM regis WHERE un= "'$user.'";
+$sql = "SELECT Fname, Lname FROM users WHERE Lname ='ponce'";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
   // output data of each row
   while($row = $result->fetch_assoc()) {
-    echo "Name: " . $row["un"]. " " . $row["pw"]. "<br>";
+    echo "Name: " . $row["Fname"]. " " . $row["Lname"]. "<br>";
   }
 } else {
   echo "0 results";
