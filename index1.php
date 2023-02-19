@@ -1,7 +1,7 @@
 <html>
 <body>
 
-<form action="where.php" method="post">
+<form action="index.php" method="post">
 First Name: <input type="text" name="Fname"><br>
 Last Name: <input type="text" name="Lname"><br>
 Age <input type="int" name="age"><br>

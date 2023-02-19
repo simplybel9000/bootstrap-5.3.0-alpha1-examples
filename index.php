@@ -1,7 +1,9 @@
 <?php
-$Fname =$_POST['un'];
-$Lname =$_POST['pw'];
-
+$Fname =$_POST['Fname'];
+$Lname =$_POST['Lname'];
+$age =$_POST['age'];
+$email =$_POST['email'];
+$detail =$_POST['detail'];
 
 $servername = "localhost";
 $username = "myadmin";
@@ -15,8 +17,8 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO users (un, paw)
-VALUES ('".$Fname."', '".$Lname."')";
+$sql = "INSERT INTO users (Fname, Lname, age, email, detail)
+VALUES ('".$Fname."', '".$Lname."', '".$age."', '".$email."', '".$detail."')";
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
